@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 40px 15px;
+    background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+}
+
+/* ---------- Card ---------- */
+.container {
+    max-width: 780px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px 38px 35px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #00bfa5, #00897b, #1de9b6);
+}
+
+/* ---------- Logo ---------- */
+.logo {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.logo img {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 4px;
+    border: 3px solid #b2dfdb;
+    box-shadow: 0 6px 16px rgba(0, 137, 123, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.06) rotate(4deg);
+    box-shadow: 0 10px 22px rgba(0, 137, 123, 0.4);
+}
+
+/* ---------- Headings ---------- */
+h1 {
+    text-align: center;
+    color: #0f2027;
+    font-size: 30px;
+    margin: 5px 0 4px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+    color: #00897b;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ---------- Form: 2 column grid ---------- */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 22px;
+}
+
+/* full width items */
+.form-group:nth-child(7),
+.form-group:nth-child(10),
+.form-group:nth-child(11),
+form > .error,
+form > br,
+form > button,
+form > .success-message {
+    grid-column: 1 / -1;
+}
+
+form > br {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #263238;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e0e6ea;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #263238;
+    background: #f7fafb;
+    transition: all 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9aa7ae;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #b2dfdb;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00897b;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(0, 137, 123, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+input[type="file"] {
+    padding: 9px;
+    background: #ffffff;
+    border-style: dashed;
+    cursor: pointer;
+}
+
+/* ---------- Radio & checkbox ---------- */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.radio-group {
+    padding: 10px 14px;
+    border: 2px solid #e0e6ea;
+    border-radius: 10px;
+    background: #f7fafb;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 500;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.radio-group input,
+.checkbox-group input {
+    width: auto;
+    accent-color: #00897b;
+    transform: scale(1.15);
+}
+
+/* ---------- Messages ---------- */
+.error {
+    color: #d32f2f;
+    font-size: 12.5px;
+    font-weight: 500;
+    margin-top: 5px;
+    display: block;
+}
+
+.success-message {
+    color: #1b5e20;
+    background: #e8f5e9;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 18px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.success-message:not(:empty) {
+    padding: 14px;
+    border: 1px solid #81c784;
+}
+
+.strength {
+    font-size: 12.5px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+/* ---------- Button ---------- */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #00897b, #00bfa5);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 137, 123, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 12px 24px rgba(0, 137, 123, 0.45);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 30px 20px 25px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 75px;
+    }
+}

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 4 - CartCraft Store</title>
+    <link rel="stylesheet" href="4.css">
+</head>
+<body>
+
+    <header>
+        <h1>CartCraft Store</h1>
+        <p>Practical 4 | DOM Manipulation and Event Handling</p>
+        <button onclick="changeTheme()">Change Theme</button>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Select HTML Elements</h2>
+            <p id="message">Welcome to CartCraft Store!</p>
+            <p class="demo">This is the first sample paragraph.</p>
+            <p class="demo">This is the second sample paragraph.</p>
+            <button onclick="selectElements()">Show Selection Details</button>
+            <p id="selectionResult" class="result"></p>
+        </section>
+
+        <section>
+            <h2>2. Update Text, Style and Link</h2>
+            <p id="content">Find something useful for your everyday needs.</p>
+
+            <button onclick="changeContent()">Update Text</button>
+            <button onclick="changeStyle()">Apply Style</button>
+            <button onclick="changeLink()">Update Link</button>
+            <button onclick="resetStyle()">Reset Style</button>
+
+            <p><a id="shopLink" href="https://example.com">Visit Store Link</a></p>
+            <p id="contentMessage" class="result"></p>
+        </section>
+
+        <section>
+            <h2>3. Manage Product List</h2>
+            <ul id="productList">
+                <li>Backpack</li>
+                <li>Water Bottle</li>
+                <li>Headphones</li>
+            </ul>
+
+            <input type="text" id="productName" placeholder="Enter a product name">
+
+            <button onclick="addProduct()">Add Item</button>
+            <button onclick="replaceProduct()">Replace First Item</button>
+            <button onclick="removeProduct()">Remove Last Item</button>
+
+            <p id="listMessage" class="result"></p>
+        </section>
+
+        <section>
+           
+   
+<section>
+    <h2>4. Product Picture Preview</h2>
+    <p>Choose an item to change its preview picture.</p>
+
+    <img id="productImage"
+         src="backpack.webp"
+         alt="Backpack preview"
+         width="240">
+
+    <br><br>
+
+    <select id="imageChoice" onchange="changeImage()">
+        <option value="Backpack">Backpack</option>
+        <option value="Bottle">Bottle</option>
+        <option value="headphone">Headphone</option>
+    </select>
+
+    <p id="imageMessage" class="result"></p>
+</section>
+
+            <h2>5. Mouse Events</h2>
+
+            <div id="eventBox"
+                 onmouseover="mouseOver()"
+                 onmouseout="mouseOut()"
+                 ondblclick="doubleClick()">
+                Move your mouse here or double-click this area.
+            </div>
+
+            <p id="eventMessage" class="result"></p>
+        </section>
+
+        <section>
+            <h2>6. Keyboard Events</h2>
+
+            <input type="text" id="userName"
+                   placeholder="Type something here"
+                   onkeydown="keyDown()"
+                   onkeyup="keyUp()">
+
+            <p id="keyMessage" class="result"></p>
+        </section>
+
+        <section>
+            <h2>7. Customer Product Form</h2>
+
+            <form id="productForm" onsubmit="submitForm(event)">
+
+                <input type="text" id="customerName" placeholder="Your name">
+
+                <input type="text" id="customerProduct" placeholder="Product you want">
+
+                <select id="category" onchange="changeCategory()">
+                    <option value="">Choose a category</option>
+                    <option value="Daily Use">Daily Use</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Accessories">Accessories</option>
+                </select>
+
+                <button type="submit">Send Details</button>
+
+            </form>
+
+            <p id="formMessage" class="result"></p>
+            <p id="categoryMessage" class="result"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CartCraft Store | Practical 4</p>
+    </footer>
+
+    <script src="4.js"></script>
+</body>
+</html>

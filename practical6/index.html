@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WanderGo Travels - async JavaScript demo: timers, callbacks, Fetch API and web storage">
+  <title>WanderGo | Explore the World</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">🧭 WanderGo</div>
+    <nav class="top-links">
+      <a href="#deals">Deals</a>
+      <a href="#explore">Explore</a>
+      <a href="#wishlist">Wishlist</a>
+      <a href="#lab">Async Lab</a>
+    </nav>
+    <div class="mode-switch">
+      <span>Mode</span>
+      <button type="button" class="chip" data-mode="day">Day</button>
+      <button type="button" class="chip" data-mode="night">Night</button>
+      <button type="button" class="chip" data-mode="sunset">Sunset</button>
+    </div>
+  </header>
+
+  <!-- Toast (setTimeout hides it) -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Hero with live ticker -->
+  <section class="hero" id="deals">
+    <h1>Your next story starts here</h1>
+    <p class="ticker">🔥 <span id="ticker-text">Fetching live deals...</span></p>
+    <p class="sale">Flash sale ends in <strong id="sale-clock">--:--</strong></p>
+    <div class="hero-actions">
+      <button type="button" id="ticker-btn">Pause deals</button>
+      <button type="button" id="sale-btn">Restart sale timer</button>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- Explore -->
+    <section id="explore" class="panel">
+      <div class="panel-head">
+        <h2>Explore Packages</h2>
+        <span id="count-badge" class="badge">0 results</span>
+      </div>
+
+      <div class="controls">
+        <input type="search" id="q" placeholder="Search place or title" aria-label="Search packages">
+        <select id="zone" aria-label="Filter by zone">
+          <option value="All">All zones</option>
+          <option value="India">India</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+        </select>
+        <select id="sort" aria-label="Sort packages">
+          <option value="default">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="score">Top Rated</option>
+        </select>
+        <button type="button" id="refresh">Refresh data</button>
+        <button type="button" id="break-net">Simulate network failure</button>
+      </div>
+
+      <div id="status" class="status hidden" role="alert"></div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <!-- Wishlist and session -->
+    <section id="wishlist" class="panel two-col">
+      <div>
+        <h2>❤️ Wishlist <small>(Local Storage)</small></h2>
+        <ul id="wish-list" class="plain-list"></ul>
+        <button type="button" id="wish-clear">Empty wishlist</button>
+      </div>
+      <div>
+        <h2>🕘 This Session <small>(Session Storage)</small></h2>
+        <ul id="session-info" class="plain-list"></ul>
+        <button type="button" id="session-clear">Reset session data</button>
+      </div>
+    </section>
+
+    <!-- Callback lab -->
+    <section id="lab" class="panel">
+      <h2>🧪 Async Lab: Callbacks</h2>
+      <p>Press the button. Every step starts only when the previous one calls back.</p>
+      <button type="button" id="lab-run">Start booking flow</button>
+      <ol id="lab-log" class="steps"></ol>
+    </section>
+
+  </main>
+
+  <footer class="foot">ITUS102 Practical 6 &middot; WanderGo Travels</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

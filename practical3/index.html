@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure Bank Ltd. - Banking utilities using JavaScript (Practical 3)">
+  <title>Secure Bank - Banking Utilities</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🏦 Secure Bank Ltd.</h1>
+    <p>Online Banking Utilities - JavaScript Fundamentals (ITUS102 Practical 3)</p>
+  </header>
+
+  <main>
+
+    <!-- ============ 1. VARIABLES AND SCOPE ============ -->
+    <section id="scope-section">
+      <h2>1. Variables and Scope (var, let, const)</h2>
+      <p>Click the button to see how <code>var</code>, <code>let</code> and <code>const</code> behave.</p>
+      <button type="button" id="scope-btn">Run Scope Demo</button>
+      <pre id="scope-output" class="output"></pre>
+    </section>
+
+    <!-- ============ 2. LOAN ELIGIBILITY ============ -->
+    <section id="eligibility-section">
+      <h2>2. Loan Eligibility Checker</h2>
+      <p>Uses relational, logical operators, if, if-else and nested if.</p>
+      <form id="eligibility-form">
+        <label for="el-age">Age (years):</label>
+        <input type="number" id="el-age" min="1" placeholder="e.g. 30">
+
+        <label for="el-income">Monthly Income (₹):</label>
+        <input type="number" id="el-income" min="0" placeholder="e.g. 50000">
+
+        <label for="el-credit">Credit Score (300-900):</label>
+        <input type="number" id="el-credit" min="300" max="900" placeholder="e.g. 760">
+
+        <label for="el-existing">Existing Monthly EMI (₹):</label>
+        <input type="number" id="el-existing" min="0" value="0">
+
+        <label for="el-loan">Loan Amount Required (₹):</label>
+        <input type="number" id="el-loan" min="1" placeholder="e.g. 500000">
+
+        <label for="el-tenure">Tenure (months):</label>
+        <input type="number" id="el-tenure" min="1" placeholder="e.g. 60">
+
+        <button type="submit">Check Eligibility</button>
+      </form>
+      <div id="eligibility-output" class="output"></div>
+    </section>
+
+    <!-- ============ 3. EMI CALCULATOR ============ -->
+    <section id="emi-section">
+      <h2>3. EMI Calculator</h2>
+      <p>Uses a reusable function with parameters and a return value, plus a <code>for</code> loop for the repayment schedule.</p>
+      <form id="emi-form">
+        <label for="emi-principal">Loan Amount (₹):</label>
+        <input type="number" id="emi-principal" min="1" placeholder="e.g. 500000">
+
+        <label for="emi-rate">Annual Interest Rate (%):</label>
+        <input type="number" id="emi-rate" min="0" step="0.01" placeholder="e.g. 9.5">
+
+        <label for="emi-months">Tenure (months):</label>
+        <input type="number" id="emi-months" min="1" placeholder="e.g. 24">
+
+        <label><input type="checkbox" id="emi-schedule"> Show first 12 months schedule</label>
+
+        <button type="submit">Calculate EMI</button>
+      </form>
+      <div id="emi-output" class="output"></div>
+    </section>
+
+    <!-- ============ 4. INTEREST CALCULATOR ============ -->
+    <section id="interest-section">
+      <h2>4. Interest Calculator and Savings Goal</h2>
+      <p>Uses a <code>for</code> loop (interest table), a <code>while</code> loop and a <code>do-while</code> loop.</p>
+      <form id="interest-form">
+        <label for="int-principal">Principal (₹):</label>
+        <input type="number" id="int-principal" min="1" placeholder="e.g. 100000">
+
+        <label for="int-rate">Annual Rate (%):</label>
+        <input type="number" id="int-rate" min="0" step="0.01" placeholder="e.g. 7">
+
+        <label for="int-years">Time (years):</label>
+        <input type="number" id="int-years" min="1" max="50" placeholder="e.g. 5">
+
+        <label for="int-type">Interest Type:</label>
+        <select id="int-type">
+          <option value="simple">Simple Interest</option>
+          <option value="compound">Compound Interest (yearly)</option>
+        </select>
+
+        <label for="int-goal">Savings Goal (₹) (optional):</label>
+        <input type="number" id="int-goal" min="1" placeholder="e.g. 200000">
+
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="interest-output" class="output"></div>
+    </section>
+
+    <!-- ============ 5. ACCOUNT UTILITIES ============ -->
+    <section id="account-section">
+      <h2>5. Account Utilities</h2>
+      <p>Uses a <code>switch</code> statement for account types, and a loop to build a transaction summary.</p>
+      <form id="account-form">
+        <label for="acc-type">Account Type:</label>
+        <select id="acc-type">
+          <option value="savings">Savings</option>
+          <option value="current">Current</option>
+          <option value="salary">Salary</option>
+          <option value="fd">Fixed Deposit</option>
+        </select>
+
+        <label for="acc-balance">Opening Balance (₹):</label>
+        <input type="number" id="acc-balance" min="0" placeholder="e.g. 25000">
+
+        <label for="acc-transactions">Transactions (comma separated; + deposit, - withdrawal):</label>
+        <input type="text" id="acc-transactions" placeholder="e.g. 5000, -2000, 1500, -800">
+
+        <button type="submit">Generate Account Summary</button>
+      </form>
+      <div id="account-output" class="output"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Secure Bank Ltd. | Client-side calculations only. No data is sent to any server.</p>
+  </footer>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

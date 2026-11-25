@@ -1,7 +1,10 @@
 [
-  {"id":1,"destination":"Goa","title":"Goa Beach Holiday","days":3,"price":8000,"description":"Explore beaches, markets and seaside attractions.","icon":"🏖️"},
-  {"id":2,"destination":"Jaipur","title":"Jaipur Heritage Tour","days":2,"price":6000,"description":"Visit famous forts, palaces and local markets.","icon":"🏰"},
-  {"id":3,"destination":"Manali","title":"Manali Mountain Escape","days":5,"price":12000,"description":"Discover mountains, scenic valleys and nature.","icon":"🏔️"},
-  {"id":4,"destination":"Kerala","title":"Kerala Backwater Trip","days":4,"price":10500,"description":"Enjoy calm backwaters, greenery and local food.","icon":"🌴"},
-  {"id":5,"destination":"Udaipur","title":"Udaipur Lake Getaway","days":2,"price":6500,"description":"Explore beautiful lakes and royal architecture.","icon":"⛵"}
+  { "id": 101, "title": "Royal Rajasthan Circuit", "place": "Jaipur, India", "zone": "India", "cost": 22999, "nights": 5, "score": 4.6, "icon": "🏰", "about": "Amber Fort, City Palace, camel ride at Pushkar and a heritage haveli stay." },
+  { "id": 102, "title": "Kerala Backwater Bliss", "place": "Alleppey, India", "zone": "India", "cost": 19999, "nights": 4, "score": 4.5, "icon": "🛶", "about": "Private houseboat, Munnar tea gardens and an Ayurvedic spa evening." },
+  { "id": 103, "title": "Ladakh High Passes", "place": "Leh, India", "zone": "India", "cost": 31999, "nights": 7, "score": 4.8, "icon": "🏔️", "about": "Pangong Lake, Nubra Valley, monasteries and the Khardung La drive." },
+  { "id": 104, "title": "Tokyo Cherry Blossom", "place": "Tokyo, Japan", "zone": "Asia", "cost": 119999, "nights": 7, "score": 4.7, "icon": "🌸", "about": "Shibuya, Asakusa, Mount Fuji day trip and a bullet train ride to Kyoto." },
+  { "id": 105, "title": "Maldives Overwater Stay", "place": "Male, Maldives", "zone": "Asia", "cost": 99999, "nights": 4, "score": 4.9, "icon": "🐠", "about": "Water villa, snorkelling with reef sharks and a sandbank picnic." },
+  { "id": 106, "title": "Singapore Family Fun", "place": "Singapore", "zone": "Asia", "cost": 64999, "nights": 5, "score": 4.4, "icon": "🦁", "about": "Gardens by the Bay, Sentosa, Universal Studios and a night safari." },
+  { "id": 107, "title": "Roman Holiday", "place": "Rome, Italy", "zone": "Europe", "cost": 104999, "nights": 6, "score": 4.5, "icon": "🏛️", "about": "Colosseum, Vatican museums, Trevi Fountain and a pasta cooking class." },
+  { "id": 108, "title": "Iceland Northern Lights", "place": "Reykjavik, Iceland", "zone": "Europe", "cost": 139999, "nights": 6, "score": 4.8, "icon": "🌌", "about": "Golden Circle, Blue Lagoon and a guided aurora hunt." }
 ]
